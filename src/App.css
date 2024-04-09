@@ -12,6 +12,8 @@
 .heading{
   text-align: center;
   font-size: 28px;
+  text-transform: capitalize;
+  text-decoration-line: underline;
 }
 .cardContainer{
   width: 100%;
@@ -28,7 +30,8 @@
 .card{
   display: block;
   width: 300px;
-  background: rgba(236,236,236,0.6);
+  background: #fff;
+  border: 1px solid #000;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -36,13 +39,14 @@
   border-radius: 15px;
 }
 .card:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   animation-delay: inherit;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 .cardImag{
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: fill;
   border-radius: 8px;
 }
@@ -59,4 +63,16 @@
   font-weight: 500;
   font-style: oblique;
   text-align: justify;
+}
+
+.cardButton{
+  width: 100%;
+  background: black;
+  color: white;
+  outline: none;
+  padding: 6px 4px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
 }

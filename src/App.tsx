@@ -60,21 +60,24 @@ const CardDetials = [
         imgSrc:'img1.webp',
         imgAlt:'img1',
         title:'Lorem Impsum Dollar1',
-        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        link:'https://tailwindcss.com/'
     },
     {
         id:2,
         imgSrc:'img2.webp',
         imgAlt:'img2',
         title:'Lorem Impsum Dollar2',
-        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        link:'https://mui.com/material-ui/'
     },
     {
         id:3,
         imgSrc:'img3.webp',
         imgAlt:'img3',
         title:'Lorem Impsum Dollar3',
-        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+        description:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        link:'https://getbootstrap.com/'
     }
 ]
 
@@ -115,10 +118,11 @@ function App() {
                 <h1 className="heading">Cards</h1>
                 <div className="cardContainer">
                     {CardDetials.map((card) => (
-                    <div className="card" key={card.id}>
+                    <div onClick={() => window.open(`${card.link}`)} className="card" key={card.id}>
                         <img src={card.imgSrc} alt={card.imgAlt} className="cardImag" />
                         <h1 className="cardHeading">{card.title}</h1>
                         <p className="cardDescription">{card.description}</p>
+                        <button onClick={() => window.open(`${card.link}`)} className="cardButton">Read More</button>
                     </div>
                     ))}
                 </div>
